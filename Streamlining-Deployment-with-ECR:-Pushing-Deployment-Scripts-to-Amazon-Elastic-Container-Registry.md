@@ -1,14 +1,17 @@
-An Introduction to AWS ECR
+An Introduction to AWS ECR\n
+
 Amazon Elastic Container Registry (ECR) is a fully-managed container registry service provided by Amazon Web Services (AWS). It offers a secure and scalable solution for storing, managing, and deploying container images. ECR is tightly integrated with other AWS services, making it an ideal choice for organizations leveraging containerization and orchestration technologies such as Docker, Amazon Elastic Container Service (ECS), and Kubernetes.
 
 ECR provides a private and highly available repository for hosting container images. It eliminates the need for organizations to set up and maintain their own container registry infrastructure, reducing operational overhead and ensuring a reliable and scalable container image management solution.
 
 The Importance of Deployment Scripts
+
 Deployment scripts play a crucial role in the deployment process of machine learning (ML) models on AWS instances. These scripts automate the setup and configuration of the runtime environment, install necessary dependencies, and execute the necessary steps to deploy the ML model for serving predictions. ML model deployment scripts on AWS instances can be written in various languages such as Python or Bash and typically involve tasks like loading the trained model, setting up API endpoints, and handling data preprocessing or post-processing steps.
 
 Efficient management of these deployment scripts is essential for ensuring smooth and consistent deployment of ML models, enabling organizations to leverage the power of their trained models for real-time predictions and decision-making in production environments. By automating the deployment process with well-designed scripts, DevOps teams can achieve faster deployment cycles, maintain version control, and ensure the scalability and reliability of their ML applications on AWS instances.
 
 Creating and Configuring an ECR Repository:
+
 1. Sign in to the AWS Management Console and navigate to the Amazon ECR service.
 2. Click on “Repositories” in the left navigation pane and then click on the “Create repository” button.
 3. Enter a name for your repository and optionally provide a description to help identify its purpose. Click on “Create repository” to proceed.
@@ -18,6 +21,7 @@ In the “Permissions” section, click on “Edit policy JSON” to define acce
 Enable encryption for the repository by clicking on “Encryption configuration” in the “Encryption” section.
 
 Creating Docker Images for Deployment Scripts:
+
 To containerize a Python model deployment script, you can follow these steps:
 To start off, begin by navigating to the directory where your python script is present. The directory we’ll be using is “python_dir”.
 
@@ -71,6 +75,7 @@ COPY . .
 CMD ["python3", "filename"]
 
 Build an Image
+
 To build the Docker image based on the provided Dockerfile, go to the directory where the Dockerfile is located and execute the following command:
 
 docker build -t image_name .
@@ -78,6 +83,7 @@ docker build -t image_name .
 Replace image_name with a suitable name for your Docker image. The . at the end specifies the build context, which includes all the files and directories in the current directory.
 
 Run your Image
+
 Once the image is built, you can run a container based on the image using the following command:
 
 docker run -d image_name
@@ -85,6 +91,7 @@ docker run -d image_name
 This will start a detached container based on the specified image, running your Python model deployment script (filename).
 
 Push a Docker image to an Amazon ECR repository
+
 The Amazon ECR repository must exist before you push the image.
 Authenticate your Docker client to the Amazon ECR registry to which you intend to push your image. To authenticate Docker to an Amazon ECR registry, run the aws ecr get-login-password command:
 
@@ -102,7 +109,8 @@ Lastly, push the image using the docker push command:
 
 docker push aws_account_id.dkr.ecr.region.amazonaws.com/repository_name:image_tag
 
-Conclusion
+Conclusion\n
+
 In conclusion, streamlining deployment with Amazon Elastic Container Registry (ECR) and pushing deployment scripts offers several advantages for efficient and reliable application deployment.
 
 First and foremost, utilizing ECR as a central repository for deployment scripts allows for easier management and version control. By storing the scripts in ECR, you ensure that the latest version is always available and accessible to the deployment process. This centralized approach simplifies the management of scripts across multiple environments and avoids potential inconsistencies that can arise from scattered script locations.
