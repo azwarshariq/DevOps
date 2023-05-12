@@ -1,4 +1,4 @@
-An Introduction to AWS ECR\n
+An Introduction to AWS ECR
 
 Amazon Elastic Container Registry (ECR) is a fully-managed container registry service provided by Amazon Web Services (AWS). It offers a secure and scalable solution for storing, managing, and deploying container images. ECR is tightly integrated with other AWS services, making it an ideal choice for organizations leveraging containerization and orchestration technologies such as Docker, Amazon Elastic Container Service (ECS), and Kubernetes.
 
@@ -109,7 +109,7 @@ Lastly, push the image using the docker push command:
 
 docker push aws_account_id.dkr.ecr.region.amazonaws.com/repository_name:image_tag
 
-Conclusion\n
+Conclusion
 
 In conclusion, streamlining deployment with Amazon Elastic Container Registry (ECR) and pushing deployment scripts offers several advantages for efficient and reliable application deployment.
 
