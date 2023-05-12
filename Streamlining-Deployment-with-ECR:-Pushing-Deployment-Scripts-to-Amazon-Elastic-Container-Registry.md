@@ -1,7 +1,9 @@
-###An Introduction to AWS ECR
+'''An Introduction to AWS ECR'''
+
 Amazon Elastic Container Registry (ECR) is a fully-managed container registry service provided by Amazon Web Services (AWS). It offers a secure and scalable solution for storing, managing, and deploying container images. ECR is tightly integrated with other AWS services, making it an ideal choice for organizations leveraging containerization and orchestration technologies such as Docker, Amazon Elastic Container Service (ECS), and Kubernetes.
 ECR provides a private and highly available repository for hosting container images. It eliminates the need for organizations to set up and maintain their own container registry infrastructure, reducing operational overhead and ensuring a reliable and scalable container image management solution.
-The Importance of Deployment Scripts
+
+'''The Importance of Deployment Scripts'''
 Deployment scripts play a crucial role in the deployment process of machine learning (ML) models on AWS instances. These scripts automate the setup and configuration of the runtime environment, install necessary dependencies, and execute the necessary steps to deploy the ML model for serving predictions. ML model deployment scripts on AWS instances can be written in various languages such as Python or Bash and typically involve tasks like loading the trained model, setting up API endpoints, and handling data preprocessing or post-processing steps.
 Efficient management of these deployment scripts is essential for ensuring smooth and consistent deployment of ML models, enabling organizations to leverage the power of their trained models for real-time predictions and decision-making in production environments. By automating the deployment process with well-designed scripts, DevOps teams can achieve faster deployment cycles, maintain version control, and ensure the scalability and reliability of their ML applications on AWS instances.
 Creating and Configuring an ECR Repository:
